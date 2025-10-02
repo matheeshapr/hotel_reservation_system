@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="545.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
+   <children>
+      <Pane layoutX="25.0" layoutY="72.0" prefHeight="104.0" prefWidth="206.0" style="-fx-background-color: #cdb4db;" />
+      <Pane prefHeight="48.0" prefWidth="958.0" style="-fx-background-color: black;">
+         <children>
+            <Button layoutX="770.0" layoutY="12.0" mnemonicParsing="false" onAction="#roomaction" text="ROOM" />
+            <Button layoutX="658.0" layoutY="12.0" mnemonicParsing="false" onAction="#custaction" text="CUSTOMER" />
+         </children>
+      </Pane>
+      <Pane layoutX="259.0" layoutY="72.0" prefHeight="104.0" prefWidth="206.0" style="-fx-background-color: #ff006e;" />
+      <Pane layoutX="490.0" layoutY="72.0" prefHeight="104.0" prefWidth="206.0" style="-fx-background-color: #06d6a0;" />
+      <Pane layoutX="727.0" layoutY="72.0" prefHeight="104.0" prefWidth="206.0" style="-fx-background-color: #8ecae6;" />
+      <Pane layoutX="25.0" layoutY="202.0" prefHeight="175.0" prefWidth="206.0" style="-fx-background-color: #f7e1d7;" />
+      <Pane layoutX="25.0" layoutY="392.0" prefHeight="136.0" prefWidth="206.0" style="-fx-background-color: #f7e1d7;" />
+      <Pane layoutX="259.0" layoutY="202.0" prefHeight="326.0" prefWidth="438.0" style="-fx-background-color: #f7e1d7;" />
+      <Pane layoutX="727.0" layoutY="202.0" prefHeight="175.0" prefWidth="206.0" style="-fx-background-color: #f7e1d7;" />
+      <Pane layoutX="727.0" layoutY="392.0" prefHeight="136.0" prefWidth="206.0" style="-fx-background-color: #f7e1d7;" />
+   </children>
+</AnchorPane>
