@@ -23,9 +23,21 @@ public class DashboardController {
     public void custaction(ActionEvent actionEvent) {
 
         try {
-            stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/"))));
+            stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/customer_infomation.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        stage1.show();
+
+    }
+
+    public void staffaction(ActionEvent actionEvent) {
+        Stage stage2 = new Stage();
+        try {
+            stage2.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Staff_infomation.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage2.show();
     }
 }

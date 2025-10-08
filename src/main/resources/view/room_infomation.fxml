@@ -1,28 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="749.0" prefWidth="957.0" style="-fx-background-color: #e6ffff;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RoomInfomation">
 
-<AnchorPane prefHeight="545.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RoomInfomation">
-   <children>
-      <TableView fx:id="tblroominfo" layoutX="149.0" layoutY="79.0" prefHeight="400.0" prefWidth="660.0">
-        <columns>
-          <TableColumn fx:id="colno" prefWidth="101.0" text="No" />
-          <TableColumn fx:id="coltype" prefWidth="184.0" text="Type" />
-            <TableColumn fx:id="coldisc" prefWidth="240.0" text="Discription" />
-            <TableColumn fx:id="colprice" prefWidth="134.0" text="Price" />
-        </columns>
-      </TableView>
-      <Button layoutX="716.0" layoutY="491.0" mnemonicParsing="false" onAction="#reloadaction" prefHeight="25.0" prefWidth="93.0" text="Reload" />
-      <Pane prefHeight="48.0" prefWidth="958.0" style="-fx-background-color: black;">
+    <children>
+
+        <!-- Room Table Card -->
+        <Pane layoutX="76.0" layoutY="98.0" prefHeight="368.0" prefWidth="805.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);">
+            <children>
+                <Label layoutX="30.0" layoutY="20.0" text="Available Rooms" textFill="#003049">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <TableView fx:id="tblroominfo" layoutX="18.0" layoutY="54.0" prefHeight="300.0" prefWidth="770.0" style="-fx-background-color: white; -fx-border-color: #adb5bd; -fx-border-radius: 10;">
+                    <columns>
+                        <TableColumn fx:id="colno" prefWidth="100.0" text="Room No" />
+                        <TableColumn fx:id="coltype" prefWidth="200.0" text="Type" />
+                        <TableColumn fx:id="coldisc" prefWidth="300.0" text="Description" />
+                        <TableColumn fx:id="colprice" prefWidth="168.0" text="Price ($)" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+
+          <Button layoutX="328.0" layoutY="673.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #06d6a0; -fx-text-fill: white; -fx-background-radius: 20;" text="UPDATE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="12.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="55.0" prefWidth="957.0" style="-fx-background-color: #212529;">
          <children>
-            <Button layoutX="770.0" layoutY="12.0" mnemonicParsing="false" onAction="#roomaction" text="ROOM" />
-            <Button layoutX="658.0" layoutY="12.0" mnemonicParsing="false" onAction="#custaction" text="CUSTOMER" />
+            <Label layoutX="20.0" layoutY="15.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="🛋️Rooms Infomation" />
+            <HBox layoutX="650.0" layoutY="10.0" spacing="15">
+               <children>
+                  <Button onAction="#custaction" style="-fx-background-color: #495057; -fx-text-fill: white;                                        -fx-background-radius: 8; -fx-font-weight: bold;" text="CUSTOMER" />
+                  <Button onAction="#roomaction" style="-fx-background-color: #495057; -fx-text-fill: white;                                        -fx-background-radius: 8; -fx-font-weight: bold;" text="ROOM" />
+               </children>
+            </HBox>
          </children>
       </Pane>
-   </children>
+      <Button layoutX="154.0" layoutY="673.0" mnemonicParsing="false" onAction="#addAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #06d6a0; -fx-text-fill: white; -fx-background-radius: 20;" text="ADD">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="497.0" layoutY="673.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #06d6a0; -fx-text-fill: white; -fx-background-radius: 20;" text="DELETE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="684.0" layoutY="673.0" mnemonicParsing="false" onAction="#clearAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #06d6a0; -fx-text-fill: white; -fx-background-radius: 20;" text="CLEAR">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtRoomid" layoutX="131.0" layoutY="509.0" prefHeight="35.0" prefWidth="298.0" promptText="Room No" />
+      <TextField fx:id="txtType" layoutX="522.0" layoutY="509.0" prefHeight="35.0" prefWidth="298.0" promptText="Type" />
+      <TextField fx:id="txtDes" layoutX="128.0" layoutY="582.0" prefHeight="35.0" prefWidth="298.0" promptText="Description" />
+      <TextField fx:id="txtPrice" layoutX="522.0" layoutY="582.0" prefHeight="35.0" prefWidth="298.0" promptText="Price" />
+
+    </children>
 </AnchorPane>
