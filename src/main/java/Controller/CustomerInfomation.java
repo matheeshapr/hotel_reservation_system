@@ -149,4 +149,7 @@ public class CustomerInfomation implements Initializable {
     public void staffaction(ActionEvent actionEvent) {
 
     }
+
+    public void dashaction(ActionEvent actionEvent) {
+    }
 }

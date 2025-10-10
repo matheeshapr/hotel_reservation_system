@@ -40,4 +40,14 @@ public class DashboardController {
         }
         stage2.show();
     }
+
+    public void dashaction(ActionEvent actionEvent) {
+        Stage stage3 = new Stage();
+        try {
+            stage3.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashborad.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage3.show();
+    }
 }

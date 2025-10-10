@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="749.0" prefWidth="957.0" style="-fx-background-color: #e6ffff;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StaffinfoController">
@@ -24,8 +25,8 @@
                         <TableColumn fx:id="colname" prefWidth="113.0" text="Name" />
                         <TableColumn fx:id="colrole" prefWidth="148.0" text="Role" />
                         <TableColumn fx:id="colemail" prefWidth="143.0" text="Email" />
-                  <TableColumn fx:id="colphno" prefWidth="146.0" text="Phone Number" />
-                  <TableColumn fx:id="colsalary" prefWidth="139.0" text="Salary" />
+                        <TableColumn fx:id="colphno" prefWidth="146.0" text="Phone Number" />
+                        <TableColumn fx:id="colsalary" prefWidth="139.0" text="Salary" />
                     </columns>
                 </TableView>
             </children>
@@ -36,18 +37,6 @@
                 <Font name="Berlin Sans FB Bold" size="12.0" />
             </font>
         </Button>
-        <Pane prefHeight="55.0" prefWidth="957.0" style="-fx-background-color: #212529;">
-            <children>
-                <Label layoutX="20.0" layoutY="15.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="🛋Staff Infomation" />
-                <HBox layoutX="650.0" layoutY="10.0" spacing="15">
-                    <children>
-                        <Button onAction="#custaction" style="-fx-background-color: #495057; -fx-text-fill: white;                                        -fx-background-radius: 8; -fx-font-weight: bold;" text="CUSTOMER" />
-                        <Button onAction="#roomaction" style="-fx-background-color: #495057; -fx-text-fill: white;                                        -fx-background-radius: 8; -fx-font-weight: bold;" text="ROOM" />
-                  <Button onAction="#staffaction" style="-fx-background-color: #495057; -fx-text-fill: white;                                        -fx-background-radius: 8; -fx-font-weight: bold;" text="STAFF" />
-                    </children>
-                </HBox>
-            </children>
-        </Pane>
         <Button layoutX="154.0" layoutY="673.0" mnemonicParsing="false" onAction="#addAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #06d6a0; -fx-text-fill: white; -fx-background-radius: 20;" text="ADD">
             <font>
                 <Font name="Berlin Sans FB Bold" size="12.0" />
@@ -67,8 +56,22 @@
         <TextField fx:id="txtEmail" layoutX="527.0" layoutY="509.0" prefHeight="35.0" prefWidth="298.0" promptText="Email" />
         <TextField fx:id="txtPhno" layoutX="133.0" layoutY="561.0" prefHeight="35.0" prefWidth="298.0" promptText="Phone Number" />
         <TextField fx:id="txtSalary" layoutX="527.0" layoutY="561.0" prefHeight="35.0" prefWidth="298.0" promptText="Salary" />
-      <TextField fx:id="txtId" layoutX="134.0" layoutY="461.0" prefHeight="35.0" prefWidth="298.0" promptText="ID" />
-      <TextField fx:id="txtName" layoutX="525.0" layoutY="461.0" prefHeight="35.0" prefWidth="298.0" promptText="Name" />
+        <TextField fx:id="txtId" layoutX="134.0" layoutY="461.0" prefHeight="35.0" prefWidth="298.0" promptText="ID" />
+        <TextField fx:id="txtName" layoutX="525.0" layoutY="461.0" prefHeight="35.0" prefWidth="298.0" promptText="Name" />
+      <Pane prefHeight="60.0" prefWidth="959.0" style="-fx-background-color: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); -fx-background-radius: 0 0 15 15;">
+         <children>
+            <Label layoutX="20.0" layoutY="15.0" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="🏨 LUXE HOTEL STAFF" />
+            <HBox layoutX="600.0" layoutY="10.0" spacing="15">
+               <children>
+                  <Button onAction="#custaction" style="-fx-background-color: rgba(255,255,255,0.15); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 8 20; -fx-font-weight: bold;" text="Customers" />
+                  <Button onAction="#roomaction" style="-fx-background-color: rgba(255,255,255,0.15);                                        -fx-text-fill: white; -fx-background-radius: 25;                                        -fx-padding: 8 20; -fx-font-weight: bold;" text="Rooms" />
+                  <Button onAction="#staffaction" style="-fx-text-fill: white; -fx-background-color: #ff006e; -fx-background-radius: 25; -fx-padding: 8 20; -fx-font-weight: bold;" text="Staff" />
+               </children>
+            </HBox>
+            <Circle fill="#06d6a0" layoutX="900.0" layoutY="30.0" radius="18" stroke="white" strokeWidth="2" />
+            <Button layoutX="485.0" layoutY="10.0" onAction="#dashaction" style="-fx-background-color: rgba(255,255,255,0.15); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 8 20; -fx-font-weight: bold;" text="Dashboard" />
+         </children>
+      </Pane>
 
     </children>
 </AnchorPane>
