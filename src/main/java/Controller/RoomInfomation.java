@@ -144,4 +144,10 @@ public class RoomInfomation implements Initializable {
         txtDes.setText("");
         txtPrice.setText("");
     }
+
+    public void staffaction(ActionEvent actionEvent) {
+    }
+
+    public void dashaction(ActionEvent actionEvent) {
+    }
 }

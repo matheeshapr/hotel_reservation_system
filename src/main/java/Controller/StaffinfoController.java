@@ -170,4 +170,6 @@ public class StaffinfoController implements Initializable {
 
     }
 
+    public void dashaction(ActionEvent actionEvent) {
+    }
 }
