@@ -4,12 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.dto.StaffinfoDTO;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -117,11 +121,6 @@ public class StaffinfoController implements Initializable {
     }
 
     @FXML
-    void custaction(ActionEvent event) {
-
-    }
-
-    @FXML
     void deleteAction(ActionEvent event) {
         StaffinfoDTO selectedStaff = tblstaffinfo.getSelectionModel().getSelectedItem();
         if (selectedStaff != null) {
@@ -138,13 +137,29 @@ public class StaffinfoController implements Initializable {
 
     }
 
+    Stage stage2 = new Stage();
     @FXML
-    void roomaction(ActionEvent event) {
+    void custaction(ActionEvent event) {
+        try {
+            stage2.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/customer_infomation.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ;
+        stage2.show();
+
 
     }
 
+    Stage stage3 = new Stage();
     @FXML
-    void staffaction(ActionEvent event) {
+    void roomaction(ActionEvent event) {
+        try {
+            stage3.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/room_infomation.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage3.show();
 
     }
 
@@ -170,6 +185,13 @@ public class StaffinfoController implements Initializable {
 
     }
 
+    Stage stage1 = new Stage();
     public void dashaction(ActionEvent actionEvent) {
+        try {
+            stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashborad.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage1.show();
     }
 }
